@@ -1,0 +1,256 @@
+/* General Styles */
+.search-page {
+    text-align: center;
+    margin-top: clamp(2rem, 5vw, 5rem); /* Clamped margin */
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between; /* Space between the items */
+    align-items: center; /* Center vertically */
+}
+
+.eventify-small {
+    font-size: clamp(1.5rem, 2vw, 2rem); /* Clamped font size */
+    font-weight: bold;
+    margin-right: auto; /* Pushes the header text to the left */
+}
+
+.logoutButton {
+    background-color: #1DB954;
+    color: white;
+    padding: clamp(0.5rem, 2vw, 0.8rem) clamp(1rem, 5vw, 1rem); /* Clamped padding */
+    font-size: clamp(0.8rem, 2vw, 1rem); /* Clamped font size */
+    border: none;
+    border-radius: 50px;
+    margin-left: clamp(1rem, 2vw, 1.5rem); /* Clamped margin from the edge */
+    cursor: pointer;
+}
+
+.logoutButton:hover {
+    background-color: #1ed760;
+}
+
+/* Search Content Styles */
+.search-content {
+    margin-top: clamp(1rem, 2vw, 3rem); /* Clamped margin */
+}
+
+.search {
+    margin-top: clamp(1rem, 2vw, 2rem); /* Clamped margin */
+    margin-left: clamp(1rem, 2vw, 2rem); /* Clamped margin */
+}
+
+/* Font Face */
+@font-face {
+    font-family: 'Circular Std';
+    src: url('./static/circular-std-2.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Home Section Styles */
+.home {
+    margin: clamp(1rem, 2vw, 2rem); /* Clamped left and right margin */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.eventify {
+    font-size: clamp(4rem, 1.8873rem + 9.0141vw, 10rem); /* Clamped font size */
+    text-align: center;
+    font-family: 'Circular Std';
+    color: rgb(223, 221, 221);
+    margin-top: clamp(10rem, 10rem + 0vw, 10rem);
+    margin-bottom: 0rem;
+    padding: clamp(1rem, 2vw, 2rem); /* Clamped padding */
+}
+
+.eventify-top {
+    font-size: clamp(2rem, 5vw, 4rem);
+    text-align: center;
+    font-family: 'Circular Std';
+    color: rgb(223, 221, 221);
+}
+
+/* Button Styles */
+.spotifyButton {
+    display: flex;
+    align-items: center;
+    font-family: 'Circular Std';
+    justify-content: center;
+    padding: clamp(0.5rem, 2vw, 1rem) clamp(1rem, 5vw, 2.5rem);
+    border-radius: 5rem;
+    background-color: #4dfccb;
+    color: black;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    cursor: pointer;
+    gap: 1rem;
+    transition: background-color 0.3s ease;
+    transition: transform 0.3s ease;
+}
+
+.spotifyButton:hover {
+    background-color: #39e6ad;
+    transform: translate(0, -3px);
+}
+
+/* Instructions Styles */
+.instructions {
+    font-size: clamp(1rem, 2vw, 1.5rem); /* Clamped font size */
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Default to column for smaller screens */
+    align-items: center; /* Center items horizontally */
+    font-family: 'Circular Std';
+    gap: clamp(1.3rem, 0.5352rem + 10.5164vw, 3rem);
+    color: #4dfccb;
+    margin-top: clamp(3rem, 0.5352rem + 10.5164vw, 10rem); /* Clamped margin */
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+    .instructions {
+        flex-direction: row; /* Change to row for larger screens */
+        justify-content: center; /* Center items in the row */
+    }
+}
+
+.instruction-item {
+    display: flex; /* Use flex to align the number and text */
+    align-items: center; /* Center the icon and text vertically */
+    gap: 0.3rem; /* Space between the number and text */
+}
+
+.highlight {
+    color: #4dfccb;
+}
+
+/* Top Artists Section Styles */
+.top-artists {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    font-family: 'Circular Std';
+    color: rgb(223, 221, 221);
+}
+
+.top-artists ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.top-artists li {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 0.5rem;
+    opacity: 0; /* Initially hidden */
+    animation: fadeIn 1s forwards; /* Apply the fadeIn animation */
+    width: calc(50% - 1rem); /* 2 items per row on smaller devices */
+    max-width: 130px; /* Optional: Set max width for artists */
+    cursor: pointer;
+}
+
+/* Animation delays for top artists */
+.top-artists li:nth-child(1) { animation-delay: 0.5s; }
+.top-artists li:nth-child(2) { animation-delay: 0.6s; }
+.top-artists li:nth-child(3) { animation-delay: 0.7s; }
+.top-artists li:nth-child(4) { animation-delay: 0.8s; }
+.top-artists li:nth-child(5) { animation-delay: 0.9s; }
+.top-artists li:nth-child(6) { animation-delay: 1s; }
+.top-artists li:nth-child(7) { animation-delay: 1.1s; }
+.top-artists li:nth-child(8) { animation-delay: 1.2s; }
+.top-artists li:nth-child(9) { animation-delay: 1.3s; }
+.top-artists li:nth-child(10) { animation-delay: 1.4s; }
+
+.top-artists li img {
+    width: clamp(80px, 10vw, 130px); /* Adjusted for better mobile display */
+    height: clamp(80px, 10vw, 130px);
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #4dfccb;
+}
+
+.top-artists li span {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    color: rgb(223, 221, 221);
+}
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    z-index: 1001;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(82, 128, 97);
+    min-width: 100px;
+    text-align: center;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    border-radius: 8px;
+    padding: clamp(0.5rem, 2vw, 0.5rem) 0;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 90%;
+    margin-top: 5px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: clamp(0.5rem, 2vw, 12px) clamp(1rem, 2vw, 16px);
+    text-decoration: none;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #39e6ad;
+    color: white;
+    border-radius: 8px;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #39e6ad;
+}
+
+/* Event Content Styles */
+.event-name {
+    color: rgb(223, 221, 221);
+    text-decoration: none;
+}
+
+.event-content {
+    font-family: 'Circular Std';
+    color: rgb(223, 221, 221);
+    text-decoration: none;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

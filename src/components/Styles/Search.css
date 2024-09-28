@@ -1,0 +1,114 @@
+.search-page {
+    text-align: center;
+    margin-top: clamp(1rem, 2vw, 3rem);
+    position: relative; /* Enable absolute positioning of child elements */
+}
+
+.header {
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+    padding: clamp(0.5rem, 2vw, 1rem) clamp(1rem, 5vw, 2rem);
+}
+
+.eventify-small {
+    font-size: clamp(1.5rem, 2vw, 2rem);
+    font-weight: bold;
+    margin-right: auto; 
+}
+
+.search-content {
+    margin-top: clamp(1rem, 2vw, 3rem);
+}
+
+.clickOnTopArtist {
+    text-align: center;
+}
+
+.search {
+    margin-top: clamp(1rem, 2vw, 2rem);
+    margin-left: clamp(1rem, 2vw, 2rem);
+    margin-right: clamp(1rem, 2vw, 2rem);
+}
+
+.upcoming-events {
+    font-family: 'Circular Std';
+    text-align: center;
+    color: rgb(223, 221, 221);
+    margin-top: clamp(1rem, 2vw, 2rem);
+    margin-left: clamp(1rem, 2vw, 2rem);
+    margin-right: clamp(1rem, 2vw, 2rem);
+    max-width: 800px; /* Adjust this value as needed */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.event-item {
+    position: relative;
+    text-align: center;
+    margin: clamp(1rem, 2vw, 20px) 0; /* Centered margins */
+    z-index: 998;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: rgba(57, 230, 173, 0.1);
+    transition: transform 0.3s;
+}
+
+.event-item:hover {
+    transform: scale(1.02);
+}
+
+.logout-button {
+    position: absolute; /* Position the button absolutely */
+    top: 1rem; /* Adjust as necessary for spacing */
+    left: 1rem; /* Adjust as necessary for spacing */
+    display: flex;
+    align-items: center;
+    font-family: 'Circular Std';
+    justify-content: center;
+    padding: clamp(0.5rem, 2vw, 1rem) clamp(1rem, 5vw, 1.5rem);
+    border-radius: 5rem;
+    background-color: #4dfccb;
+    color: black;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    cursor: pointer;
+    gap: 1rem;
+    transition: background-color 0.3s ease;
+    transition: transform 0.3s ease;
+}
+
+.logout-button:hover {
+    background-color: #39e6ad;
+    transform: translate(0, -3px);
+}
+
+.logout-button:active {
+    transform: scale(0.95);
+}
+
+.calenderButton{
+    display: flex;
+    align-items: center;
+    font-family: 'Circular Std';
+    justify-content: center;
+    padding: clamp(0.5rem, 2vw, 1rem) clamp(1rem, 5vw, 1.5rem);
+    border-radius: 5rem;
+    background-color: #4dfccb;
+    color: black;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    cursor: pointer;
+    gap: 1rem;
+    transition: background-color 0.3s ease;
+    transition: transform 0.3s ease;
+}
+
+.event-item a {
+    text-decoration: none;
+    color: inherit; /* Ensures the link inherits the text color */
+}
+
+.event-item a:hover {
+    text-decoration: none; /* Prevent underline on hover as well */
+    color: inherit; /* Ensures the color remains unchanged on hover */
+}
