@@ -3,7 +3,7 @@ import { FaSpotify } from "react-icons/fa";
 import './Styles/Search.css'
 import { google, ics } from "calendar-link";
 
-const CLIENT_ID = "40579d9dae13427fb3cd25ca6d7586e1";
+const CLIENT_ID = "";
 const SPOTIFY_AUTHORIZE_ENDPOINT = "https://accounts.spotify.com/authorize";
 const REDIRECT_URL_AFTER_LOGIN = "https://eventify.one/";
 const SPACE_DELIMITER = "%20";
@@ -23,7 +23,7 @@ const getReturnParamsFromSpotifyAuth = (hash) => {
 };
 
 // Ticketmaster API credentials
-const TICKETMASTER_API_KEY = "vin5ASi00AGzhuhORUuv2O9Ln2GLPvwN";
+const TICKETMASTER_API_KEY = "";
 const TICKETMASTER_EVENTS_ENDPOINT = "https://app.ticketmaster.com/discovery/v2/events.json";
 
 const createCalendarUrls = (event) => {
