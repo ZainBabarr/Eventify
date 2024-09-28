@@ -4,7 +4,7 @@ import axios from 'axios';
 import './Styles/Home.css';
 import Search from './Search';
 
-const CLIENT_ID = "40579d9dae13427fb3cd25ca6d7586e1";
+const CLIENT_ID = "";
 const SPOTIFY_AUTHORIZE_ENDPOINT = "https://accounts.spotify.com/authorize";
 const REDIRECT_URL_AFTER_LOGIN = "https://eventify.one/search";
 const SCOPES = ["user-read-currently-playing", "user-read-playback-state", "user-top-read"];
